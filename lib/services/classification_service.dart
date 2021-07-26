@@ -11,23 +11,23 @@ class ClassificationService {
   late List<int> outputShape;
   late List<String> labels;
 
-  ClassificationService({String modelPath, String labelPath}) {
-    _interpreterOptions = InterpreterOptions();
-
-    _interpreterOptions.threads = 1;
-  }
-
-  Future<void> loadModel(String modelPath) async {
-    try {
-      interpreter = await Interpreter.fromAsset(modelPath, options: _interpreterOptions);
-
-      inputShape = interpreter.getInputTensor(0).shape;
-      outputShape = interpreter.getOutputTensor(0).shape;
-      outputType = interpreter.getOutputTensor(0).type;
-
-      outputBuffer = 
-    } catch(err) {
-
-    }
-  }
+  // ClassificationService({String modelPath, String labelPath}) {
+  //   _interpreterOptions = InterpreterOptions();
+  //
+  //   _interpreterOptions.threads = 1;
+  // }
+  //
+  // Future<void> loadModel(String modelPath) async {
+  //   try {
+  //     interpreter = await Interpreter.fromAsset(modelPath, options: _interpreterOptions);
+  //
+  //     inputShape = interpreter.getInputTensor(0).shape;
+  //     outputShape = interpreter.getOutputTensor(0).shape;
+  //     outputType = interpreter.getOutputTensor(0).type;
+  //
+  //     outputBuffer =
+  //   } catch(err) {
+  //
+  //   }
+  // }
 }
